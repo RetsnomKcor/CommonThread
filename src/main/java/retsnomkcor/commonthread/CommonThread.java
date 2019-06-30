@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.VillagerRegistry;
+import retsnomkcor.commonthread.config.FarmingConfig;
 import retsnomkcor.commonthread.handler.MobDropHandler;
 import retsnomkcor.commonthread.proxy.CommonProxy;
 import retsnomkcor.commonthread.recipe.ModRecipes;
@@ -59,10 +60,12 @@ public class CommonThread {
         MinecraftForge.EVENT_BUS.register(new MobDropHandler());
 
         //Add trades to villagers
-        VillagerRegistry.FARMER.getCareer(0).addTrade(1, new EntityVillager.EmeraldForItems(ModItems.itemLettuce, new EntityVillager.PriceInfo(17, 23)));
+        if (FarmingConfig.enableCropTrades) {
+            VillagerRegistry.FARMER.getCareer(0).addTrade(1, new EntityVillager.EmeraldForItems(ModItems.itemLettuce, new EntityVillager.PriceInfo(17, 23)));
+        }
 
         //Add seed drops to grass
-        MinecraftForge.addGrassSeed(new ItemStack(ModItems.itemLettuceSeeds), 7);
+        MinecraftForge.addGrassSeed(new ItemStack(ModItems.itemLettuceSeeds), FarmingConfig.seedsGrassDrops);
     }
 
     @Mod.EventHandler
