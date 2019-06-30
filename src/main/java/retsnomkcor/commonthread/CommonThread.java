@@ -1,6 +1,7 @@
 package retsnomkcor.commonthread;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -11,6 +12,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.VillagerRegistry;
 import retsnomkcor.commonthread.handler.MobDropHandler;
 import retsnomkcor.commonthread.proxy.CommonProxy;
 import retsnomkcor.commonthread.recipe.ModRecipes;
@@ -55,6 +57,12 @@ public class CommonThread {
         proxy.init(event);
         ModRecipes.init();
         MinecraftForge.EVENT_BUS.register(new MobDropHandler());
+
+        //Add trades to villagers
+        VillagerRegistry.FARMER.getCareer(0).addTrade(1, new EntityVillager.EmeraldForItems(ModItems.itemLettuce, new EntityVillager.PriceInfo(17, 23)));
+
+        //Add seed drops to grass
+        MinecraftForge.addGrassSeed(new ItemStack(ModItems.itemLettuceSeeds), 7);
     }
 
     @Mod.EventHandler
