@@ -1,0 +1,30 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "crop"
+  },
+  "variants": {
+    "age": {
+      "0": {
+        "textures": {
+          "crop": "commonthread:blocks/crops/lettuce/0"
+        }
+      },
+      "1": {
+        "textures": {
+          "crop": "commonthread:blocks/crops/lettuce/1"
+        }
+      },
+      "2": {
+        "textures": {
+          "crop": "commonthread:blocks/crops/lettuce/2"
+        }
+      },
+      "3": {
+        "textures": {
+          "crop": "commonthread:blocks/crops/lettuce/3"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[
+{
+  "modid": "commonthread",
+  "name": "Common Thread",
+  "description": "A bunch of stuff and things",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["RetsnomKcor"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

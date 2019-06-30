@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "commonthread:items/immutable_alloy_ingot"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "commonthread:lettuce"
+    }
+  ],
+  "result": {
+    "item": "commonthread:lettuce_seeds"
+  }
+}

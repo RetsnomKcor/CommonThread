@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "commonthread:claw_dagger"
+  },
+  "pattern": [
+    "   ",
+    " C ",
+    " S "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "C": {
+      "item": "commonthread:bear_claw"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  }
+}

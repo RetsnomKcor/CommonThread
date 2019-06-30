@@ -1,0 +1,32 @@
+{
+  "result": {
+    "item": "commonthread:garden_salad"
+  },
+  "pattern": [
+    " M ",
+    "TLC",
+    " B "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "C": {
+      "type": "forge:ore_dict",
+      "ore": "cropCarrot"
+    },
+    "B": {
+      "item": "minecraft:bowl"
+    },
+    "L": {
+      "type": "forge:ore_dict",
+      "ore": "cropLettuce"
+    },
+    "M": {
+      "type": "forge:ore_dict",
+      "ore": "listAllmushroom"
+    },
+    "T": {
+      "type": "forge:ore_dict",
+      "ore": "cropTomato"
+    }
+  }
+}
