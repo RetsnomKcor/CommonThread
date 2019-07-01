@@ -1,4 +1,4 @@
-package retsnomkcor.commonthread.items;
+package retsnomkcor.commonthread.items.useless;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -8,11 +8,11 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import retsnomkcor.commonthread.CommonThread;
 
-public class ItemPowerCore extends Item {
+public class ItemImmutableAlloyIngot extends Item {
 
-    public ItemPowerCore() {
-        setTranslationKey(CommonThread.modId + ".power_core");
-        setRegistryName(new ResourceLocation(CommonThread.modId, "power_core"));
+    public ItemImmutableAlloyIngot() {
+        setTranslationKey(CommonThread.modId + ".immutable_alloy_ingot");
+        setRegistryName(new ResourceLocation(CommonThread.modId, "immutable_alloy_ingot"));
         setCreativeTab(CommonThread.creativeTab);
     }
 

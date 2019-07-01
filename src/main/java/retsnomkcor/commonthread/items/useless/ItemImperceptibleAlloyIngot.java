@@ -1,4 +1,4 @@
-package retsnomkcor.commonthread.items;
+package retsnomkcor.commonthread.items.useless;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -8,11 +8,11 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import retsnomkcor.commonthread.CommonThread;
 
-public class ItemSunOrb extends Item {
+public class ItemImperceptibleAlloyIngot extends Item {
 
-    public ItemSunOrb() {
-        setTranslationKey(CommonThread.modId + ".sun_orb");
-        setRegistryName(new ResourceLocation(CommonThread.modId, "sun_orb"));
+    public ItemImperceptibleAlloyIngot() {
+        setTranslationKey(CommonThread.modId + ".imperceptible_alloy_ingot");
+        setRegistryName(new ResourceLocation(CommonThread.modId, "imperceptible_alloy_ingot"));
         setCreativeTab(CommonThread.creativeTab);
     }
 

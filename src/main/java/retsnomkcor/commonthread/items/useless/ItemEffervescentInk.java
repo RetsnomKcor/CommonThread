@@ -1,4 +1,4 @@
-package retsnomkcor.commonthread.items;
+package retsnomkcor.commonthread.items.useless;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -8,11 +8,11 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import retsnomkcor.commonthread.CommonThread;
 
-public class ItemImperceptibleAlloyIngot extends Item {
+public class ItemEffervescentInk extends Item {
 
-    public ItemImperceptibleAlloyIngot() {
-        setTranslationKey(CommonThread.modId + ".imperceptible_alloy_ingot");
-        setRegistryName(new ResourceLocation(CommonThread.modId, "imperceptible_alloy_ingot"));
+    public ItemEffervescentInk() {
+        setTranslationKey(CommonThread.modId + ".effervescent_ink");
+        setRegistryName(new ResourceLocation(CommonThread.modId, "effervescent_ink"));
         setCreativeTab(CommonThread.creativeTab);
     }
 

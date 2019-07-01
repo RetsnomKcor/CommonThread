@@ -12,6 +12,7 @@ import retsnomkcor.commonthread.items.food.ItemCaesarSalad;
 import retsnomkcor.commonthread.items.food.ItemChickenSalad;
 import retsnomkcor.commonthread.items.food.ItemGardenSalad;
 import retsnomkcor.commonthread.items.tool.ItemSword;
+import retsnomkcor.commonthread.items.useless.*;
 
 
 public class ModItems {

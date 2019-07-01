@@ -1,4 +1,4 @@
-package retsnomkcor.commonthread.items;
+package retsnomkcor.commonthread.items.useless;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -8,11 +8,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import retsnomkcor.commonthread.CommonThread;
 
-public class ItemImmutableAlloyIngot extends Item {
-
-    public ItemImmutableAlloyIngot() {
-        setTranslationKey(CommonThread.modId + ".immutable_alloy_ingot");
-        setRegistryName(new ResourceLocation(CommonThread.modId, "immutable_alloy_ingot"));
+public class ItemBleedingStar extends Item {
+    public ItemBleedingStar() {
+        setTranslationKey(CommonThread.modId + ".bleeding_star");
+        setRegistryName(new ResourceLocation(CommonThread.modId, "bleeding_star"));
         setCreativeTab(CommonThread.creativeTab);
     }
 

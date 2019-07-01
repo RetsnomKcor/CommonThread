@@ -1,4 +1,4 @@
-package retsnomkcor.commonthread.items;
+package retsnomkcor.commonthread.items.useless;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -8,11 +8,11 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import retsnomkcor.commonthread.CommonThread;
 
-public class ItemEffervescentInk extends Item {
+public class ItemSunOrb extends Item {
 
-    public ItemEffervescentInk() {
-        setTranslationKey(CommonThread.modId + ".effervescent_ink");
-        setRegistryName(new ResourceLocation(CommonThread.modId, "effervescent_ink"));
+    public ItemSunOrb() {
+        setTranslationKey(CommonThread.modId + ".sun_orb");
+        setRegistryName(new ResourceLocation(CommonThread.modId, "sun_orb"));
         setCreativeTab(CommonThread.creativeTab);
     }
 
