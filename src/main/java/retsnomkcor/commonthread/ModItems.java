@@ -10,6 +10,7 @@ import retsnomkcor.commonthread.items.crops.ItemLettuce;
 import retsnomkcor.commonthread.items.crops.ItemLettuceSeeds;
 import retsnomkcor.commonthread.items.food.ItemCaesarSalad;
 import retsnomkcor.commonthread.items.food.ItemChickenSalad;
+import retsnomkcor.commonthread.items.food.ItemFlour;
 import retsnomkcor.commonthread.items.food.ItemGardenSalad;
 import retsnomkcor.commonthread.items.tool.ItemSword;
 import retsnomkcor.commonthread.items.useless.*;
@@ -80,6 +81,9 @@ public class ModItems {
     @GameRegistry.ObjectHolder("commonthread:garden_salad")
     public static ItemGardenSalad itemGardenSalad;
 
+    @GameRegistry.ObjectHolder("commonthread:flour")
+    public static ItemFlour itemFlour;
+
     public static ItemSword clawDagger = new ItemSword(CommonThread.clawToolMaterial, "claw_dagger");
 
     @SideOnly(Side.CLIENT)
@@ -106,6 +110,7 @@ public class ModItems {
         itemCaesarSalad.initModel();
         itemChickenSalad.initModel();
         itemGardenSalad.initModel();
+        itemFlour.initModel();
 
     }
 
@@ -135,5 +140,6 @@ public class ModItems {
         registry.register(new ItemCaesarSalad());
         registry.register(new ItemChickenSalad());
         registry.register(new ItemGardenSalad());
+        registry.register(new ItemFlour());
     }
 }

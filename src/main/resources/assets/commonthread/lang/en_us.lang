@@ -1,5 +1,6 @@
 itemGroup.commonthread=Common Thread
 
+#Items
 item.commonthread.bleeding_star.name=Bleeding Star
 item.commonthread.crystal_sphere.name=Crystal Sphere
 item.commonthread.dense_power_core.name=Dense Power Core
@@ -22,3 +23,4 @@ item.commonthread.lettuce_seeds.name=Lettuce Seeds
 item.commonthread.caesar_salad.name=Caesar Salad
 item.commonthread.chicken_salad.name=Chicken Salad
 item.commonthread.garden_salad.name=Garden Salad
+item.commonthread.flour.name=Flour
