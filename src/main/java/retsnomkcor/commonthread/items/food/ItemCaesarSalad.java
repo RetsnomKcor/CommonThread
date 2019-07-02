@@ -11,7 +11,7 @@ import retsnomkcor.commonthread.CommonThread;
 public class ItemCaesarSalad extends ItemFood {
 
     public ItemCaesarSalad() {
-        super(4,0.4f,false);
+        super(2,0.4f,false);
         setTranslationKey(CommonThread.modId + ".caesar_salad");
         setRegistryName(new ResourceLocation(CommonThread.modId, "caesar_salad"));
         setCreativeTab(CommonThread.creativeTab);

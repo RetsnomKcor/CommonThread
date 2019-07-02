@@ -18,5 +18,6 @@ public class ModRecipes {
         ModItems.itemBearMeatCooked.initOreDict();
         ModItems.itemLettuce.initOreDict();
         ModItems.itemFlour.initOreDict();
+        ModItems.itemLettuceSeeds.initOreDict();
     }
 }
