@@ -7,6 +7,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 import retsnomkcor.commonthread.CommonThread;
 import retsnomkcor.commonthread.ModBlocks;
 
@@ -22,6 +23,12 @@ public class ItemLettuceSeeds extends ItemSeeds {
     @SideOnly(Side.CLIENT)
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+    }
+
+    public void initOreDict() {
+
+        OreDictionary.registerOre("seedLettuce", this);
+        OreDictionary.registerOre("listAllSeed", this);
     }
 
 }
