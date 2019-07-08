@@ -10,4 +10,7 @@ public class FarmingConfig {
 
     @Config.Comment(value = "Enable villager trades for new crops?")
     public static boolean enableCropTrades = true;
+
+    @Config.Comment(value = "Enable lettuce")
+    public static boolean enableLettuce = true;
 }

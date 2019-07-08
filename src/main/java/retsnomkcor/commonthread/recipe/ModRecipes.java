@@ -1,12 +1,9 @@
 package retsnomkcor.commonthread.recipe;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import retsnomkcor.commonthread.ModItems;
-import retsnomkcor.commonthread.items.ItemBearMeat;
 
 public class ModRecipes {
 
