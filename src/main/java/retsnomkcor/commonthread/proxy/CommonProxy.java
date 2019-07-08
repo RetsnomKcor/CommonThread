@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import retsnomkcor.commonthread.ModBlocks;
 import retsnomkcor.commonthread.ModItems;
 import retsnomkcor.commonthread.ModLiquids;
+import retsnomkcor.commonthread.init.ModVillagers;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
@@ -23,6 +24,7 @@ public class CommonProxy {
 
     public void init(FMLInitializationEvent e) {
 
+        ModVillagers.associateCareersAndTrades();
     }
 
     public void postInit(FMLPostInitializationEvent e) {

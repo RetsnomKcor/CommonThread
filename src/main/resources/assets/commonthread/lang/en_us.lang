@@ -24,3 +24,13 @@ item.commonthread.caesar_salad.name=Caesar Salad
 item.commonthread.chicken_salad.name=Chicken Salad
 item.commonthread.garden_salad.name=Garden Salad
 item.commonthread.flour.name=Flour
+item.commonthread.quicksand_bucket.name=Quicksand Bucket
+
+#Blocks
+tile.commonthread.quicksand.name=Quicksand
+
+#Fluids
+fluid.quicksand=Quicksand
+
+#Entities
+entity.Villager.dye_merchant=Dyer

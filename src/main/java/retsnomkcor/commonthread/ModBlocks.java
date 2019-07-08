@@ -6,6 +6,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 import retsnomkcor.commonthread.blocks.Crops.BlockCropLettuce;
+import retsnomkcor.commonthread.fluids.BlockQuickSand;
 
 public class ModBlocks {
 
@@ -19,6 +20,8 @@ public class ModBlocks {
     @GameRegistry.ObjectHolder("commonthread:crop_lettuce")
     public static BlockCropLettuce blockCropLettuce;
 
+    @GameRegistry.ObjectHolder("mymod:quicksand")
+    public static BlockQuickSand blockQuickSand;
 
 
 
@@ -27,6 +30,7 @@ public class ModBlocks {
         //how to register the block model
         //blockFastFurnace.initModel();
         //blockOil.initModel();
+        blockQuickSand.initModel();
     }
 
     public static void register(IForgeRegistry<Block> registry) {
@@ -35,6 +39,7 @@ public class ModBlocks {
         //register tile entities
         //GameRegistry.registerTileEntity(TileFastFurnace.class, MyMod.MODID + "_fast_furnace");
         registry.register(new BlockCropLettuce());
+        registry.register(new BlockQuickSand());
 
 
     }
