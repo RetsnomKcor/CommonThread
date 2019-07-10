@@ -6,6 +6,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemFlintAndSteel;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
@@ -45,8 +46,9 @@ public class BlockQuickSand extends BlockFluidClassic {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(QUICKSAND, "inventory"));
     }
 
-    //@Override
-    //public void onEntityCollision(World world, BlockPos pos, IBlockState state, Entity entity) {
-    //    entity.setInWeb();
-    //}
+    @Override
+    public void onEntityCollision(World world, BlockPos pos, IBlockState state, Entity entity) {
+        entity.setInWeb();
+
+    }
 }

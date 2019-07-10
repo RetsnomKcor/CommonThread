@@ -30,7 +30,8 @@ public class ModBlocks {
         //how to register the block model
         //blockFastFurnace.initModel();
         //blockOil.initModel();
-        blockQuickSand.initModel();
+        System.out.println("Moon Shoes");
+        //blockQuickSand.initModel();
     }
 
     public static void register(IForgeRegistry<Block> registry) {

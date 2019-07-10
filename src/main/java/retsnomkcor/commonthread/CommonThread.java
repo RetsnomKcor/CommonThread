@@ -60,12 +60,14 @@ public class CommonThread {
         MinecraftForge.EVENT_BUS.register(new MobDropHandler());
 
         //Add trades to villagers
-        if (FarmingConfig.enableCropTrades) {
+        if (FarmingConfig.enableCropTrades && FarmingConfig.enableLettuce) {
             VillagerRegistry.FARMER.getCareer(0).addTrade(1, new EntityVillager.EmeraldForItems(ModItems.itemLettuce, new EntityVillager.PriceInfo(17, 23)));
         }
 
         //Add seed drops to grass
-        MinecraftForge.addGrassSeed(new ItemStack(ModItems.itemLettuceSeeds), FarmingConfig.seedsGrassDrops);
+        if (FarmingConfig.enableLettuce) {
+            MinecraftForge.addGrassSeed(new ItemStack(ModItems.itemLettuceSeeds), FarmingConfig.seedsGrassDrops);
+        }
     }
 
     @Mod.EventHandler

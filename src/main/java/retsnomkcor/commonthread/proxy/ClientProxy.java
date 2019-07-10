@@ -21,8 +21,9 @@ public class ClientProxy extends CommonProxy {
 
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
-
+        System.out.println("this works right");
         ModBlocks.initModels();
+        System.out.println("how about now");
         ModItems.initModels();
     }
 
