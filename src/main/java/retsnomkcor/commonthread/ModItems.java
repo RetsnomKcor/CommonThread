@@ -5,6 +5,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
+import retsnomkcor.commonthread.config.FarmingConfig;
+import retsnomkcor.commonthread.config.MobDropsConfig;
+import retsnomkcor.commonthread.config.TweaksConfig;
 import retsnomkcor.commonthread.items.*;
 import retsnomkcor.commonthread.items.crops.ItemLettuce;
 import retsnomkcor.commonthread.items.crops.ItemLettuceSeeds;
@@ -101,16 +104,24 @@ public class ModItems {
         itemPowerCore.initModel();
         itemSunOrb.initModel();
         itemVellumBinding.initModel();
-        clawDagger.initModel();
-        itemBearClaw.initModel();
-        itemBearMeat.initModel();
-        itemBearMeatCooked.initModel();
-        itemLettuce.initModel();
-        itemLettuceSeeds.initModel();
-        itemCaesarSalad.initModel();
-        itemChickenSalad.initModel();
-        itemGardenSalad.initModel();
-        itemFlour.initModel();
+        if (MobDropsConfig.enableDrops && MobDropsConfig.enableBearMeat){
+            itemBearMeat.initModel();
+            itemBearMeatCooked.initModel();
+        }
+        if (MobDropsConfig.enableDrops && MobDropsConfig.enableBearClaws){
+            clawDagger.initModel();
+            itemBearClaw.initModel();
+        }
+        if (FarmingConfig.enableLettuce) {
+            itemLettuce.initModel();
+            itemLettuceSeeds.initModel();
+            itemCaesarSalad.initModel();
+            itemChickenSalad.initModel();
+            itemGardenSalad.initModel();
+        }
+        if (TweaksConfig.enableFlour) {
+            itemFlour.initModel();
+        }
 
     }
 
@@ -131,15 +142,24 @@ public class ModItems {
         registry.register(new ItemPowerCore());
         registry.register(new ItemSunOrb());
         registry.register(new ItemVellumBinding());
-        registry.register(clawDagger);
-        registry.register(new ItemBearClaw());
-        registry.register(new ItemBearMeat());
-        registry.register(new ItemBearMeatCooked());
-        registry.register(new ItemLettuce());
-        registry.register(new ItemLettuceSeeds());
-        registry.register(new ItemCaesarSalad());
-        registry.register(new ItemChickenSalad());
-        registry.register(new ItemGardenSalad());
-        registry.register(new ItemFlour());
+        if (MobDropsConfig.enableDrops && MobDropsConfig.enableBearMeat) {
+            registry.register(new ItemBearMeat());
+            registry.register(new ItemBearMeatCooked());
+        }
+        if (MobDropsConfig.enableDrops && MobDropsConfig.enableBearClaws){
+            registry.register(clawDagger);
+            registry.register(new ItemBearClaw());
+        }
+        if (FarmingConfig.enableLettuce){
+            registry.register(new ItemLettuce());
+            registry.register(new ItemLettuceSeeds());
+            registry.register(new ItemCaesarSalad());
+            registry.register(new ItemChickenSalad());
+            registry.register(new ItemGardenSalad());
+        }
+
+        if (TweaksConfig.enableFlour) {
+            registry.register(new ItemFlour());
+        }
     }
 }
