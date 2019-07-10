@@ -45,8 +45,8 @@ public class BlockQuickSand extends BlockFluidClassic {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(QUICKSAND, "inventory"));
     }
 
-    @Override
-    public void onEntityCollision(World world, BlockPos pos, IBlockState state, Entity entity) {
-        entity.setInWeb();
-    }
+    //@Override
+    //public void onEntityCollision(World world, BlockPos pos, IBlockState state, Entity entity) {
+    //    entity.setInWeb();
+    //}
 }

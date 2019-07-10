@@ -23,7 +23,7 @@ public class CommonThread {
 
     public static final String modId = "commonthread";
     public static final String name = "Common Thread";
-    public static final String version = "0.0.2.1";
+    public static final String version = "0.0.3.0";
 
     @SidedProxy(clientSide = "retsnomkcor.commonthread.proxy.ClientProxy", serverSide = "retsnomkcor.commonthread.proxy.ServerProxy")
     public static CommonProxy proxy;

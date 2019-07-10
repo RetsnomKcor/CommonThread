@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
+import retsnomkcor.commonthread.ModBlocks;
 import retsnomkcor.commonthread.ModItems;
 
 @Mod.EventBusSubscriber(Side.CLIENT)
@@ -21,7 +22,7 @@ public class ClientProxy extends CommonProxy {
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
 
-        //ModBlocks.initModels();
+        ModBlocks.initModels();
         ModItems.initModels();
     }
 
