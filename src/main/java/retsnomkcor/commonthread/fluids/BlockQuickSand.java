@@ -34,6 +34,7 @@ public class BlockQuickSand extends BlockFluidClassic {
 
     @SideOnly(Side.CLIENT)
     public void initModel() {
+        System.out.println("please dear god");
         ModelResourceLocation fluidLocation = new ModelResourceLocation(QUICKSAND, "fluid");
 
         StateMapperBase customState = new StateMapperBase() {

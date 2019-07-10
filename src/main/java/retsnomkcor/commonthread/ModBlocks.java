@@ -14,13 +14,13 @@ public class ModBlocks {
     //@GameRegistry.ObjectHolder("mymod:fast_furnace")
     //public static BlockFastFurnace blockFastFurnace;
 
-    //@GameRegistry.ObjectHolder("mymod:oil")
+    //@GameRegistry.ObjectHolder("commonthread:oil")
     //public static BlockOil blockOil;
 
     @GameRegistry.ObjectHolder("commonthread:crop_lettuce")
     public static BlockCropLettuce blockCropLettuce;
 
-    @GameRegistry.ObjectHolder("mymod:quicksand")
+    @GameRegistry.ObjectHolder("commonthread:quicksand")
     public static BlockQuickSand blockQuickSand;
 
 
@@ -31,7 +31,7 @@ public class ModBlocks {
         //blockFastFurnace.initModel();
         //blockOil.initModel();
         System.out.println("Moon Shoes");
-        //blockQuickSand.initModel();
+        blockQuickSand.initModel();
     }
 
     public static void register(IForgeRegistry<Block> registry) {
