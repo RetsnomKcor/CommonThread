@@ -1,7 +1,9 @@
 package retsnomkcor.commonthread.init;
 
 import net.minecraft.entity.passive.EntityVillager;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -15,9 +17,12 @@ import retsnomkcor.commonthread.CommonThread;
 public class ModVillagers {
     //create villager professions
     public static final VillagerRegistry.VillagerProfession decorator = null;
+    public static final VillagerRegistry.VillagerProfession naturist = null;
 
     //create villager careers
     public static VillagerRegistry.VillagerCareer dye_merchant;
+    public static VillagerRegistry.VillagerCareer designer;
+    public static VillagerRegistry.VillagerCareer florist;
 
     @Mod.EventBusSubscriber(modid = CommonThread.modId)
     public static class RegistrationHandler
@@ -32,6 +37,12 @@ public class ModVillagers {
                     CommonThread.modId+":decorator",
                     CommonThread.modId+":textures/entity/villager/dyer.png",
                     CommonThread.modId+":textures/entity/zombie_villager/zombie_dyer.png"));
+
+            registry.register(new VillagerRegistry.VillagerProfession(
+                    CommonThread.modId+":naturist",
+                    CommonThread.modId+":textures/entity/villager/naturist.png",
+                    CommonThread.modId+"textures/entity/zombie_villager/zombie_naturist.png"
+            ));
         }
     }
 
@@ -46,6 +57,12 @@ public class ModVillagers {
                         new EntityVillager.EmeraldForItems(Items.DYE, new EntityVillager.PriceInfo(5,8)))
                 .addTrade(2, new EntityVillager.ListItemForEmeralds(new ItemStack(Items.BANNER, 1, 3), new EntityVillager.PriceInfo(5,9)),
                         new EntityVillager.ListItemForEmeralds(new ItemStack(Items.BANNER, 1, 8), new EntityVillager.PriceInfo(5,9)));
+
+        designer = (new VillagerRegistry.VillagerCareer(decorator, "designer"))
+                .addTrade(1, new EntityVillager.EmeraldForItems(Items.ITEM_FRAME, new EntityVillager.PriceInfo(1,3)));
+
+        florist = (new VillagerRegistry.VillagerCareer(naturist, "florist"))
+                .addTrade(1, new EntityVillager.ListItemForEmeralds(new ItemStack(Items.FLOWER_POT, 1), new EntityVillager.PriceInfo(1,2)));
     }
 
 
