@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import retsnomkcor.commonthread.ModBlocks;
 import retsnomkcor.commonthread.ModItems;
 import retsnomkcor.commonthread.ModLiquids;
+import retsnomkcor.commonthread.config.VillageConfig;
 import retsnomkcor.commonthread.init.ModVillagers;
 
 @Mod.EventBusSubscriber
@@ -24,7 +25,9 @@ public class CommonProxy {
 
     public void init(FMLInitializationEvent e) {
 
-        ModVillagers.associateCareersAndTrades();
+        if (VillageConfig.enableVillage && VillageConfig.enableVillagers) {
+            ModVillagers.associateCareersAndTrades();
+        }
     }
 
     public void postInit(FMLPostInitializationEvent e) {
