@@ -7,6 +7,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 import retsnomkcor.commonthread.config.FarmingConfig;
 import retsnomkcor.commonthread.config.MobDropsConfig;
+import retsnomkcor.commonthread.config.PackmakerConfig;
 import retsnomkcor.commonthread.config.TweaksConfig;
 import retsnomkcor.commonthread.items.*;
 import retsnomkcor.commonthread.items.crops.ItemLettuce;
@@ -91,19 +92,21 @@ public class ModItems {
 
     @SideOnly(Side.CLIENT)
     public static void initModels() {
-        itemBleedingStar.initModel();
-        itemCrystalSphere.initModel();
-        itemDensePowerCore.initModel();
-        itemEffervescentInk.initModel();
-        itemFaunaEssence.initModel();
-        itemFloraEssence.initModel();
-        itemImmutableAlloyIngot.initModel();
-        itemImperceptibleAlloyIngot.initModel();
-        itemMagicPaper.initModel();
-        itemPhoenixQuill.initModel();
-        itemPowerCore.initModel();
-        itemSunOrb.initModel();
-        itemVellumBinding.initModel();
+        if (PackmakerConfig.enablePackTools) {
+            itemBleedingStar.initModel();
+            itemCrystalSphere.initModel();
+            itemDensePowerCore.initModel();
+            itemEffervescentInk.initModel();
+            itemFaunaEssence.initModel();
+            itemFloraEssence.initModel();
+            itemImmutableAlloyIngot.initModel();
+            itemImperceptibleAlloyIngot.initModel();
+            itemMagicPaper.initModel();
+            itemPhoenixQuill.initModel();
+            itemPowerCore.initModel();
+            itemSunOrb.initModel();
+            itemVellumBinding.initModel();
+        }
         if (MobDropsConfig.enableDrops && MobDropsConfig.enableBearMeat){
             itemBearMeat.initModel();
             itemBearMeatCooked.initModel();
@@ -129,19 +132,21 @@ public class ModItems {
         //registry.register(new ItemRuby());
         //registry.register(new ItemBlock(ModBlocks.blockFrigidOre).setRegistryName(BlockFrigidOre.FRIGID_ORE));
 
-        registry.register(new ItemBleedingStar());
-        registry.register(new ItemCrystalSphere());
-        registry.register(new ItemDensePowerCore());
-        registry.register(new ItemEffervescentInk());
-        registry.register(new ItemFaunaEssence());
-        registry.register(new ItemFloraEssence());
-        registry.register(new ItemImmutableAlloyIngot());
-        registry.register(new ItemImperceptibleAlloyIngot());
-        registry.register(new ItemMagicPaper());
-        registry.register(new ItemPhoenixQuill());
-        registry.register(new ItemPowerCore());
-        registry.register(new ItemSunOrb());
-        registry.register(new ItemVellumBinding());
+        if (PackmakerConfig.enablePackTools) {
+            registry.register(new ItemBleedingStar());
+            registry.register(new ItemCrystalSphere());
+            registry.register(new ItemDensePowerCore());
+            registry.register(new ItemEffervescentInk());
+            registry.register(new ItemFaunaEssence());
+            registry.register(new ItemFloraEssence());
+            registry.register(new ItemImmutableAlloyIngot());
+            registry.register(new ItemImperceptibleAlloyIngot());
+            registry.register(new ItemMagicPaper());
+            registry.register(new ItemPhoenixQuill());
+            registry.register(new ItemPowerCore());
+            registry.register(new ItemSunOrb());
+            registry.register(new ItemVellumBinding());
+        }
         if (MobDropsConfig.enableDrops && MobDropsConfig.enableBearMeat) {
             registry.register(new ItemBearMeat());
             registry.register(new ItemBearMeatCooked());
