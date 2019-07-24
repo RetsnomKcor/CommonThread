@@ -44,13 +44,13 @@ public class ModVillagers {
             registry.register(new VillagerRegistry.VillagerProfession(
                     CommonThread.modId+":naturist",
                     CommonThread.modId+":textures/entity/villager/naturist.png",
-                    CommonThread.modId+"textures/entity/zombie_villager/zombie_naturist.png"
+                    CommonThread.modId+":textures/entity/zombie_villager/zombie_naturist.png"
             ));
 
             registry.register(new VillagerRegistry.VillagerProfession(
                     CommonThread.modId+":chef",
-                    CommonThread.modId+"textures/entity/villager/planner.png",
-                    CommonThread.modId+"textures/entity/zombie_villager/zombie_planner.png"
+                    CommonThread.modId+":textures/entity/villager/chef.png",
+                    CommonThread.modId+":textures/entity/zombie_villager/zombie_chef.png"
             ));
         }
     }
