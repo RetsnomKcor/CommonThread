@@ -26,6 +26,7 @@ public class ItemLettuce extends ItemFood {
     public void initOreDict() {
 
         OreDictionary.registerOre("cropLettuce", this);
-        OreDictionary.registerOre("listAllVeggie", this);
+        OreDictionary.registerOre("listAllveggie", this);
+        OreDictionary.registerOre("foodVegetable", this);
     }
 }
