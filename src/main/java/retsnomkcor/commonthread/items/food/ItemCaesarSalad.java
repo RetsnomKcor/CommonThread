@@ -21,4 +21,6 @@ public class ItemCaesarSalad extends ItemFood {
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
+
+    //Figure out how the hell to return the bowl at some point later
 }
