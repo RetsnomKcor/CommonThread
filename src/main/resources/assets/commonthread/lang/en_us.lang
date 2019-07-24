@@ -36,3 +36,4 @@ fluid.quicksand=Quicksand
 entity.Villager.dye_merchant=Dyer
 entity.Villager.designer=Designer
 entity.Villager.florist=Florist
+entity.Villager.baker=Baker

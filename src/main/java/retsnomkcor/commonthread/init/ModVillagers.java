@@ -19,11 +19,13 @@ public class ModVillagers {
     //create villager professions
     public static final VillagerRegistry.VillagerProfession decorator = null;
     public static final VillagerRegistry.VillagerProfession naturist = null;
+    public static final VillagerRegistry.VillagerProfession chef = null;
 
     //create villager careers
     public static VillagerRegistry.VillagerCareer dye_merchant;
     public static VillagerRegistry.VillagerCareer designer;
     public static VillagerRegistry.VillagerCareer florist;
+    public static VillagerRegistry.VillagerCareer baker;
 
     @Mod.EventBusSubscriber(modid = CommonThread.modId)
     public static class RegistrationHandler
@@ -43,6 +45,12 @@ public class ModVillagers {
                     CommonThread.modId+":naturist",
                     CommonThread.modId+":textures/entity/villager/naturist.png",
                     CommonThread.modId+"textures/entity/zombie_villager/zombie_naturist.png"
+            ));
+
+            registry.register(new VillagerRegistry.VillagerProfession(
+                    CommonThread.modId+":chef",
+                    CommonThread.modId+"textures/entity/villager/planner.png",
+                    CommonThread.modId+"textures/entity/zombie_villager/zombie_planner.png"
             ));
         }
     }
@@ -69,6 +77,12 @@ public class ModVillagers {
                                    new EntityVillager.ListItemForEmeralds(new ItemStack(Item.getItemFromBlock(Blocks.RED_FLOWER), 2, 0), new EntityVillager.PriceInfo(1, 2)))
                 .addTrade(2, new RandomTrades.RandTradesByMeta(new EntityVillager.PriceInfo(2,4), Item.getItemFromBlock(Blocks.RED_FLOWER), 2, "1","2","3","4","5","6","7","8"))
                 .addTrade(3, new RandomTrades.RandTradesByMeta(new EntityVillager.PriceInfo(3, 5), Item.getItemFromBlock(Blocks.DOUBLE_PLANT), 2, "0","1","4","5"));
+
+        baker = (new VillagerRegistry.VillagerCareer(chef, "baker"))
+                .addTrade(1, new EntityVillager.ListItemForEmeralds(new ItemStack(Items.BREAD,1), new EntityVillager.PriceInfo(1,2)))
+                .addTrade(2, new EntityVillager.ListItemForEmeralds(new ItemStack(Items.COOKIE,2), new EntityVillager.PriceInfo(2,4)))
+                .addTrade(3, new EntityVillager.ListItemForEmeralds(new ItemStack(Items.CAKE,1), new EntityVillager.PriceInfo(2,5)),
+                                   new EntityVillager.ListItemForEmeralds(new ItemStack(Items.PUMPKIN_PIE,1), new EntityVillager.PriceInfo(2,5)));
     }
 
 

@@ -31,8 +31,8 @@ public class ModRecipes {
             ModItems.itemLettuceSeeds.initOreDict();
         }
 
-        OreDictionary.registerOre("listAllMushroom", Item.getItemFromBlock(Blocks.BROWN_MUSHROOM));
-        OreDictionary.registerOre("listAllMushroom", Item.getItemFromBlock(Blocks.RED_MUSHROOM));
+        OreDictionary.registerOre("listAllmushroom", Item.getItemFromBlock(Blocks.BROWN_MUSHROOM));
+        OreDictionary.registerOre("listAllmushroom", Item.getItemFromBlock(Blocks.RED_MUSHROOM));
 
 
 
