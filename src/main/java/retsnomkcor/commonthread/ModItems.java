@@ -88,6 +88,9 @@ public class ModItems {
     @GameRegistry.ObjectHolder("commonthread:flour")
     public static ItemFlour itemFlour;
 
+    @GameRegistry.ObjectHolder("commonthread:fire_sticks")
+    public static ItemFireSticks itemFireSticks;
+
     public static ItemSword clawDagger = new ItemSword(CommonThread.clawToolMaterial, "claw_dagger");
 
     @SideOnly(Side.CLIENT)
@@ -124,6 +127,10 @@ public class ModItems {
         }
         if (TweaksConfig.enableFlour) {
             itemFlour.initModel();
+        }
+
+        if (TweaksConfig.enableFireSticks) {
+            itemFireSticks.initModel();
         }
 
     }
@@ -165,6 +172,10 @@ public class ModItems {
 
         if (TweaksConfig.enableFlour) {
             registry.register(new ItemFlour());
+        }
+
+        if (TweaksConfig.enableFireSticks) {
+            registry.register(new ItemFireSticks());
         }
     }
 }

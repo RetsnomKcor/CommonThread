@@ -25,6 +25,7 @@ item.commonthread.chicken_salad.name=Chicken Salad
 item.commonthread.garden_salad.name=Garden Salad
 item.commonthread.flour.name=Flour
 item.commonthread.quicksand_bucket.name=Quicksand Bucket
+item.commonthread.fire_sticks.name=Fire Sticks
 
 #Blocks
 tile.commonthread.quicksand.name=Quicksand
